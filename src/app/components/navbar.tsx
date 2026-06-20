@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, Mountain } from "lucide-react";
+import { ChevronDown, Mountain, Menu, X, Phone, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router";
+import logoUrl from "../../../assets/skr logo.png";
 
 const packageLinks = [
   { id: "adi-kailash", label: "Adi Kailash & Om Parvat", icon: "🏔️" },
@@ -132,7 +133,7 @@ export function Navbar() {
           padding: 9px 24px;
           border-radius: 999px;
           border: none;
-          background: linear-gradient(135deg, #3fa9f5 0%, #0e7dd6 100%);
+          background: linear-gradient(135deg, #66BFFF 0%, #0e7dd6 100%);
           box-shadow:
             0 4px 16px rgba(14, 125, 214, 0.45),
             inset 0 1px 0 rgba(255, 255, 255, 0.35);
@@ -157,7 +158,7 @@ export function Navbar() {
           width: 36px;
           height: 36px;
           border-radius: 11px;
-          background: linear-gradient(135deg, #3fa9f5, #0b6cb8);
+          background: linear-gradient(135deg, #66BFFF, #0b6cb8);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -218,20 +219,23 @@ export function Navbar() {
                 flexShrink: 0,
               }}
             >
-              <div className="logo-glass">
-                <Mountain style={{ width: 18, height: 18, color: "#fff" }} />
-              </div>
+              <img 
+                src={logoUrl} 
+                alt="SKR Tours Logo" 
+                style={{ height: "45px", width: "auto", objectFit: "contain" }} 
+              />
               <span
+                className="hidden sm:inline-block"
                 style={{
                   fontFamily: "Playfair Display, serif",
                   fontWeight: 700,
-                  fontSize: "1rem",
+                  fontSize: "1.1rem",
                   color: "rgba(255,255,255,0.95)",
                   letterSpacing: "0.04em",
                   whiteSpace: "nowrap",
                 }}
               >
-                SKS TOURS
+                SKR TOURS
               </span>
             </Link>
 
