@@ -90,21 +90,6 @@ function VideoCard({ video }: { video: typeof videoTestimonials[0] }) {
         </div>
       </div>
 
-      {/* Card Footer */}
-      <div className="p-4">
-        <h4
-          className="text-white font-semibold text-base mb-1"
-          style={{ fontFamily: 'Playfair Display, serif' }}
-        >
-          {video.title}
-        </h4>
-        <p
-          className="text-white/50 text-sm"
-          style={{ fontFamily: 'Inter, sans-serif' }}
-        >
-          {video.location}
-        </p>
-      </div>
     </div>
   );
 }
